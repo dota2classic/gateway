@@ -1,3 +1,3 @@
 export function lol(){
-  console.log("kek 2!")
+  console.log("kek 24!")
 }
