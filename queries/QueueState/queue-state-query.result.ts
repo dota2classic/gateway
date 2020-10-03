@@ -2,16 +2,11 @@ import { MatchmakingMode } from "../../shared-types/matchmaking-mode";
 import { PartyId } from "../../shared-types/party-id";
 import { PlayerId } from "../../shared-types/player-id";
 
-export class GatewayQueueStateQuery_Player {
-  constructor(public readonly id: PlayerId) {}
+interface GatewayQueueStateQuery_QueueEntry {
+  readonly partyID: PartyId;
+  readonly players: PlayerId[];
 }
-export class GatewayQueueStateQuery_QueueEntry {
-  constructor(
-    public readonly partyID: PartyId,
-    public readonly players: GatewayQueueStateQuery_Player[],
-  ) {}
-}
-export class GatewayQueueStateQueryResult {
+export class QueueStateQueryResult {
   constructor(
     public readonly mode: MatchmakingMode,
     public readonly entries: GatewayQueueStateQuery_QueueEntry[],

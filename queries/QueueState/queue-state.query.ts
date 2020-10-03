@@ -1,5 +1,5 @@
 import { MatchmakingMode } from "../../shared-types/matchmaking-mode";
 
-export class GatewayQueueStateQuery {
+export class QueueStateQuery {
   constructor(public readonly mode: MatchmakingMode) {}
 }
