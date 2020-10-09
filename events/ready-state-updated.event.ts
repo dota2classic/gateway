@@ -1,6 +1,10 @@
 import {RoomReadyState} from "./room-ready-check-complete.event";
+import {MatchmakingMode} from "../shared-types/matchmaking-mode";
 
 export class ReadyStateUpdatedEvent {
-  constructor(public readonly roomID: string, public readonly state: RoomReadyState) {
-  }
+  constructor(
+    public readonly roomID: string,
+    public readonly mode: MatchmakingMode,
+    public readonly state: RoomReadyState,
+  ) {}
 }
