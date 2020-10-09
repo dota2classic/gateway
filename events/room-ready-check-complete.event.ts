@@ -6,7 +6,12 @@ export class ReadyCheckEntry {
   }
 }
 
+
+export class RoomReadyState {
+  total: number;
+  accepted: number;
+}
 export class RoomReadyCheckCompleteEvent {
-  constructor(public readonly id: string, public readonly entries: ReadyCheckEntry[]) {
+  constructor(public readonly id: string, public readonly state: RoomReadyState) {
   }
 }
