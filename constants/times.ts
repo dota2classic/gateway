@@ -1,0 +1,1 @@
+export const ROOM_READY_CHECK_ACCEPT_TIME = 10_000
