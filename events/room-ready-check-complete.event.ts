@@ -13,6 +13,7 @@ export class RoomReadyState {
   total: number;
   accepted: number;
 }
+
 export class RoomReadyCheckCompleteEvent {
   constructor(
     public readonly id: string,
