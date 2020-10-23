@@ -1,4 +1,3 @@
-
 export enum MatchmakingMode {
   RANKED = 0,
   UNRANKED = 1,
@@ -13,8 +12,10 @@ export const MatchmakingModes = [
   MatchmakingMode.SOLOMID,
   MatchmakingMode.RANKED,
   MatchmakingMode.UNRANKED,
-]
-
+  MatchmakingMode.DIRETIDE,
+  MatchmakingMode.ABILITY_DRAFT,
+  MatchmakingMode.GREEVILING,
+];
 
 export const RoomSizes: { [key in MatchmakingMode]: number } = {
   [MatchmakingMode.SOLOMID]: 2,
