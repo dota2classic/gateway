@@ -1,22 +1,29 @@
-import { IQueryHandler, QueryHandler } from "@nestjs/cqrs";
-import { ClientProxy } from "@nestjs/microservices";
-import { Type } from "@nestjs/common";
+import { IQueryHandler, QueryHandler } from '@nestjs/cqrs';
+import { ClientProxy } from '@nestjs/microservices';
+import { Type } from '@nestjs/common';
 
-export function outerQuery<T, B>(type: Type<T>, provide: string = "RedisQueue"): any {
-  @QueryHandler(type)
-  class A implements IQueryHandler<T, B> {
-    constructor(private readonly redis: ClientProxy) {}
+export function outerQuery<T, B>(
+  type: Type<T>,
+  provide: string = 'RedisQueue',
+): any {
+  // Small trick to set class.name dynamically, it is needed for nestjs
+  const ClassName = `${type.name}Handler`;
+  const context = {
+    [ClassName]: class implements IQueryHandler<T, B> {
+      constructor(private readonly redis: ClientProxy) {}
 
-    execute(query: T): Promise<B> {
-      return this.redis.send<B>(type.name, query).toPromise();
-    }
-  }
+      execute(query: T): Promise<B> {
+        return this.redis.send<B>(type.name, query).toPromise();
+      }
+    },
+  };
 
+  QueryHandler(type)(context[ClassName]);
 
   return {
-    provide: A,
+    provide: `${type.name}Handler`,
     useFactory(core: ClientProxy) {
-      return new A(core);
+      return new context[ClassName](core);
     },
     inject: [provide],
   };
