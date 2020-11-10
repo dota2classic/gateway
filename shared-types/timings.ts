@@ -1,0 +1,1 @@
+export const PARTY_INVITE_LIFETIME = 30_000
