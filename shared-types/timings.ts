@@ -1,1 +1,2 @@
 export const PARTY_INVITE_LIFETIME = 30_000
+export const ACCEPT_GAME_TIMEOUT = 60_000
