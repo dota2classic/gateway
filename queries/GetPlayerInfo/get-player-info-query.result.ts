@@ -5,7 +5,8 @@ export class PlayerOverviewSummary {
   constructor(
     public readonly rankedGamesPlayed: number,
     public readonly totalWinrate: number,
-    public readonly rank: number
+    public readonly rank: number,
+    public readonly bestHeroes: string[]
   ) {}
 }
 export class GetPlayerInfoQueryResult {
