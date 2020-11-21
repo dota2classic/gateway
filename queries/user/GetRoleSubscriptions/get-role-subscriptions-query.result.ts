@@ -7,7 +7,13 @@ export class RoleSubscriptionEntry {
   playerId: PlayerId;
 }
 
+export class UserRoleSummary {
+  constructor(
+    public readonly steam_id: string,
+    public readonly entries: RoleSubscriptionEntry[],
+  ) {}
+}
+
 export class GetRoleSubscriptionsQueryResult {
-  constructor(public readonly entries: RoleSubscriptionEntry[]) {
-  }
+  constructor(public readonly entries: UserRoleSummary[]) {}
 }
