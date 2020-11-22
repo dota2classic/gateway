@@ -15,6 +15,6 @@ export class GetPlayerInfoQueryResult {
     public readonly version: Dota2Version,
     public readonly mmr: number,
     public readonly recentWinrate: number,
-    public readonly summary: PlayerOverviewSummary
+    public readonly summary: PlayerOverviewSummary,
   ) {}
 }
