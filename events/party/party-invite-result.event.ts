@@ -5,5 +5,6 @@ export class PartyInviteResultEvent {
     public readonly inviteId: string,
     public readonly invited: PlayerId,
     public readonly accept: boolean,
+    public readonly inviter: PlayerId
   ) {}
 }
