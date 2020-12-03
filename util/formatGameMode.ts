@@ -16,7 +16,9 @@ export default (mode: MatchmakingMode) => {
     return "Ability Draft";
   } else if (mode === MatchmakingMode.TOURNAMENT) {
     return "Турнир";
-  } else {
+  } else if (mode === MatchmakingMode.BOTS) {
+    return "Боты";
+  }else {
     return "Неизвестный режим";
   }
 };
