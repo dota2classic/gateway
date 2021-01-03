@@ -4,3 +4,4 @@ import { MatchmakingMode } from "../shared-types/matchmaking-mode";
 export class PlayerLeaveQueueCommand {
   constructor(public readonly playerID: PlayerId, public readonly mode: MatchmakingMode) {}
 }
+
