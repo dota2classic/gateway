@@ -20,6 +20,7 @@ export class PlayerOverviewSummary {
     public readonly totalWinrate: number,
     public readonly rank: number,
     public readonly bestHeroes: string[],
+    public readonly newbieGamesLeft: number
   ) {}
 }
 export class GetPlayerInfoQueryResult {
