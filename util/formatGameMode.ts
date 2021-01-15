@@ -17,7 +17,7 @@ export default (mode: MatchmakingMode) => {
   } else if (mode === MatchmakingMode.TOURNAMENT) {
     return "Турнир";
   } else if (mode === MatchmakingMode.BOTS) {
-    return "Боты";
+    return "Обычная (с ботами)";
   }else {
     return "Неизвестный режим";
   }
