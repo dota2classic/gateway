@@ -6,7 +6,7 @@ interface GatewayQueueStateQuery_QueueEntry {
   readonly partyID: PartyId;
   readonly players: PlayerId[];
 }
-export class QueueStateQueryResult {
+export class GetQueueStateQueryResult {
   constructor(
     public readonly mode: MatchmakingMode,
     public readonly entries: GatewayQueueStateQuery_QueueEntry[],
