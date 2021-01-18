@@ -8,6 +8,12 @@ export class BanStatus {
     0,
     BanReason.INFINITE_BAN,
   );
+
+  static PERMA_BAN: BanStatus = new BanStatus(
+    true,
+    new Date(2048, 6).getTime(),
+    BanReason.INFINITE_BAN,
+  );
   constructor(
     public readonly isBanned: boolean,
     public readonly bannedUntil: number,
