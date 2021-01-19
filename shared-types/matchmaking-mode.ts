@@ -10,7 +10,7 @@ export enum MatchmakingMode {
 }
 
 export const MatchmakingModes = [
-  // MatchmakingMode.SOLOMID,
+  MatchmakingMode.SOLOMID,
   MatchmakingMode.RANKED,
   MatchmakingMode.UNRANKED,
   MatchmakingMode.DIRETIDE,

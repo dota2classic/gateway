@@ -1,10 +1,16 @@
-import { IQueryHandler, QueryHandler } from '@nestjs/cqrs';
-import { ClientProxy } from '@nestjs/microservices';
-import { Type } from '@nestjs/common';
+import { IQueryHandler, QueryHandler } from "@nestjs/cqrs";
+import { ClientProxy } from "@nestjs/microservices";
+import { Type } from "@nestjs/common";
+
+export interface CacheMiddleware<T, B> {
+  getCached(query: T): Promise<B | undefined>
+  setNew(query: T, value: B): Promise<void>;
+}
 
 export function outerQuery<T, B>(
   type: Type<T>,
-  provide: string = 'RedisQueue',
+  provide: string = "RedisQueue",
+  cache?: CacheMiddleware<T, B>,
 ): any {
   // Small trick to set class.name dynamically, it is needed for nestjs
   const ClassName = `${type.name}Handler`;
@@ -12,8 +18,15 @@ export function outerQuery<T, B>(
     [ClassName]: class implements IQueryHandler<T, B> {
       constructor(private readonly redis: ClientProxy) {}
 
-      execute(query: T): Promise<B> {
-        return this.redis.send<B>(type.name, query).toPromise();
+      async execute(query: T): Promise<B> {
+        if (cache) {
+          const cached = await cache.getCached(query);
+          if (cached) return cached;
+        }
+        const result = await this.redis.send<B>(type.name, query).toPromise();
+        await cache?.setNew(query, result);
+
+        return result;
       }
     },
   };
