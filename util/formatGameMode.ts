@@ -18,6 +18,8 @@ export default (mode: MatchmakingMode) => {
     return "Турнир";
   } else if (mode === MatchmakingMode.BOTS) {
     return "Обычная (с ботами)";
+  } else if (mode === MatchmakingMode.HIGHROOM) {
+    return "High room";
   }else {
     return "Неизвестный режим";
   }
