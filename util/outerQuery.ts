@@ -1,6 +1,6 @@
-import { IQueryHandler, QueryHandler } from "@nestjs/cqrs";
-import { ClientProxy } from "@nestjs/microservices";
-import { Type } from "@nestjs/common";
+import {IQueryHandler, QueryHandler} from "@nestjs/cqrs";
+import {ClientProxy} from "@nestjs/microservices";
+import {Type} from "@nestjs/common";
 
 export interface CacheMiddleware<T, B> {
   getCached(query: T): Promise<B | undefined>
@@ -23,10 +23,7 @@ export function outerQuery<T, B>(
           const cached = await cache.getCached(query);
           if (cached) return cached;
         }
-        const result = await this.redis.send<B>(type.name, query).toPromise();
-        await cache?.setNew(query, result);
-
-        return result;
+        return await this.redis.send<B>(type.name, query).toPromise();
       }
     },
   };
