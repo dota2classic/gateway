@@ -6,7 +6,8 @@ export enum MatchmakingMode {
   GREEVILING = 4,
   ABILITY_DRAFT = 5,
   TOURNAMENT = 6,
-  BOTS = 7
+  BOTS = 7,
+  HIGHROOM = 8
 }
 
 export const MatchmakingModes = [
@@ -17,6 +18,7 @@ export const MatchmakingModes = [
   MatchmakingMode.ABILITY_DRAFT,
   MatchmakingMode.GREEVILING,
   MatchmakingMode.BOTS,
+  MatchmakingMode.HIGHROOM,
 ];
 
 export const RoomSizes: { [key in MatchmakingMode]: number } = {
@@ -27,5 +29,6 @@ export const RoomSizes: { [key in MatchmakingMode]: number } = {
   [MatchmakingMode.GREEVILING]: 10,
   [MatchmakingMode.TOURNAMENT]: 10,
   [MatchmakingMode.ABILITY_DRAFT]: 10,
-  [MatchmakingMode.BOTS]: 10
+  [MatchmakingMode.BOTS]: 10,
+  [MatchmakingMode.HIGHROOM]: 10,
 };
