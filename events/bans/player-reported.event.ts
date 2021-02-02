@@ -5,5 +5,6 @@ export class PlayerReportedEvent {
     public readonly reporter: PlayerId,
     public readonly reported: PlayerId,
     public readonly matchId: number,
+    public readonly reportId: number
   ) {}
 }
