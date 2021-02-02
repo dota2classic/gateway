@@ -12,6 +12,7 @@ export const GAMES_TO_ADD_REPORT = 10;
 export const REPORT_STACK_WINDOW = '48 hours'
 export const CRITICAL_REPORT_COUNT_TO_BAN = 5
 
+export const MATCH_REPORT_TIMEOUT = 1000 * 60 * 60 * 24 * 3 // 24 HOURS
 
 // 5 min
 export const LIGHT_PUNISHMENT = 1000 * 60 * 5;
