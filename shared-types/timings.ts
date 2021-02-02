@@ -8,9 +8,9 @@ export const NOT_LOAD_FIRST_BAN = 1000 * 60 * 10;
 
 export const ADDITIVE_NOT_LOAD_BAN = 1000 * 60 * 60 * 4; // 4 hours
 
-export const GAMES_TO_ADD_REPORT = 10;
-export const REPORT_STACK_WINDOW = '48 hours'
-export const CRITICAL_REPORT_COUNT_TO_BAN = 5
+export const GAMES_TO_ADD_REPORT = 8;
+export const REPORT_STACK_WINDOW = '24 hours'
+export const CRITICAL_REPORT_COUNT_TO_BAN = 3
 
 export const MATCH_REPORT_TIMEOUT = 1000 * 60 * 60 * 24 * 3 // 24 HOURS
 
@@ -19,8 +19,8 @@ export const LIGHT_PUNISHMENT = 1000 * 60 * 5;
 
 
 
-// 8 hrs
-export const HARD_PUNISHMENT = 1000 * 60 * 60 * 4;
+// 3 hrs
+export const HARD_PUNISHMENT = 1000 * 60 * 60 * 3;
 
 // 40 hrs
 export const VERY_HARD_PUNISHMENT = 1000 * 60 * 60 * 40;
