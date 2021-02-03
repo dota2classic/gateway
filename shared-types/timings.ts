@@ -1,6 +1,6 @@
 
 export const PARTY_INVITE_LIFETIME = 30_000;
-export const ACCEPT_GAME_TIMEOUT = 120_000;
+export const ACCEPT_GAME_TIMEOUT = 60_000;
 
 export const UNRANKED_GAMES_REQUIRED_FOR_RANKED = 1;
 
