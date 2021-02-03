@@ -8,6 +8,7 @@ export const NOT_LOAD_FIRST_BAN = 1000 * 60 * 10;
 
 export const ADDITIVE_NOT_LOAD_BAN = 1000 * 60 * 60 * 4; // 4 hours
 
+export const FREE_REPORT_PER_GAMES = 3
 export const GAMES_TO_ADD_REPORT = 5;
 export const REPORT_STACK_WINDOW = '24 hours'
 export const CRITICAL_REPORT_COUNT_TO_BAN = 3
