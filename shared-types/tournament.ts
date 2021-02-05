@@ -1,10 +1,16 @@
-
 export enum BracketType {
-  SINGLE_ELIMINATION = 0,
-  DOUBLE_ELIMINATION = 1,
+  SINGLE_ELIMINATION = 'SINGLE_ELIMINATION',
+  DOUBLE_ELIMINATION = 'DOUBLE_ELIMINATION',
 }
 
 export enum BracketEntryType {
-  PLAYER = 0,
-  TEAM = 1,
+  PLAYER = 'PLAYER',
+  TEAM = 'TEAM',
+}
+
+export enum TournamentStatus {
+  NEW = 'NEW',
+  ONGOING = 'ONGOING',
+  FINISHED = 'FINISHED',
+  CANCELLED = 'CANCELLED',
 }
