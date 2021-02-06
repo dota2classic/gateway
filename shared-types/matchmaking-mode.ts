@@ -7,7 +7,7 @@ export enum MatchmakingMode {
   ABILITY_DRAFT = 5,
   TOURNAMENT = 6,
   BOTS = 7,
-  HIGHROOM = 8
+  HIGHROOM = 8,
 }
 
 export const MatchmakingModes = [
