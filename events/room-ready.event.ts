@@ -9,7 +9,9 @@ export class MatchInfo {
     public readonly radiant: PlayerId[],
     public readonly dire: PlayerId[],
     public readonly averageMMR: number,
-    public readonly version: Dota2Version
+    public readonly version: Dota2Version,
+    public readonly tournamentId?: number,
+    public readonly tournamentMatchId?: number,
   ) {}
 }
 
