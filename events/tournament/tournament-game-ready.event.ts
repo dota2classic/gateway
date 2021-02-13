@@ -8,8 +8,7 @@ export class TournamentGameReadyEvent {
     public readonly tourMatchId: number,
     public readonly mode: MatchmakingMode,
     public readonly radiant: PlayerId[],
-    public readonly dire: PlayerId[],
-    public readonly entryType: BracketEntryType
+    public readonly dire: PlayerId[]
   ) {
   }
 }
