@@ -21,6 +21,7 @@ export const MatchmakingModes = [
   MatchmakingMode.GREEVILING,
   MatchmakingMode.BOTS,
   MatchmakingMode.HIGHROOM,
+  MatchmakingMode.CAPTAINS_MODE,
 ];
 
 export const RoomSizes: { [key in MatchmakingMode]: number } = {
