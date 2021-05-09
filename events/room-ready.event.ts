@@ -22,5 +22,6 @@ export class RoomReadyEvent {
     public readonly radiant: PlayerId[],
     public readonly dire: PlayerId[],
     public readonly averageMMR: number,
+    public readonly version: Dota2Version
   ) {}
 }
