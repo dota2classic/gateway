@@ -17,6 +17,11 @@ export class GSMatchInfo {
     public readonly roomId: string,
     public readonly players: MatchPlayer[],
     public readonly version: Dota2Version,
+
+
+    public readonly radiant: PlayerId[],
+    public readonly dire: PlayerId[],
+    public readonly averageMMR: number,
   ) {}
 }
 
