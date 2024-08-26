@@ -16,6 +16,7 @@ export function outerQuery<T, B>(
 ): any {
   // Small trick to set class.name dynamically, it is needed for nestjs
   const ClassName = `${type.name}Handler`;
+  console.log(ClassName)
   const context = {
     [ClassName]: class implements IQueryHandler<T, B> {
       private readonly logger = new Logger(ClassName);
@@ -51,13 +52,17 @@ export function outerQuery<T, B>(
     },
   };
 
+  console.log(context)
   QueryHandler(type)(context[ClassName]);
 
-  return {
-    provide: `${type.name}Handler`,
+  const provider = {
+    // provide: `${type.name}Handler`,
+    provide: context[ClassName],
     useFactory(core: ClientProxy) {
       return new context[ClassName](core);
     },
     inject: [provide],
   };
+  console.log(provider)
+  return provider;
 }
