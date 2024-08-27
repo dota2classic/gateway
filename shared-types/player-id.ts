@@ -1,7 +1,6 @@
 export class PlayerId {
-  private static regex = new RegExp(`\\[U:1:\\d+\]`);
   constructor(public readonly value: string) {
-    if (!PlayerId.regex.test(value)) {
+    if (Number.isNaN(parseInt(value))) {
       throw new Error("Wrong id");
     }
   }
