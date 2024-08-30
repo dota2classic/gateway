@@ -1,4 +1,6 @@
 import { MatchmakingMode } from '../../shared-types/matchmaking-mode';
+import { DotaTeam } from '../../shared-types/dota-team';
+import { Dota_GameMode } from '../../shared-types/dota-game-mode';
 
 export interface PlayerInMatchDTO {
   readonly steam_id: string;
@@ -20,8 +22,9 @@ export interface PlayerInMatchDTO {
 export class GameResultsEvent {
   constructor(
     public readonly matchId: number,
-    public readonly radiantWin: boolean,
+    public readonly winner: DotaTeam,
     public readonly duration: number,
+    public readonly gameMode: Dota_GameMode,
     public readonly type: MatchmakingMode,
     public readonly timestamp: number,
     public readonly server: string,
