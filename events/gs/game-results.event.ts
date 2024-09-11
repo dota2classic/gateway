@@ -21,7 +21,8 @@ export interface PlayerInMatchDTO {
   readonly xpm: number;
   readonly last_hits: number;
   readonly denies: number;
-  readonly abandoned?: boolean;
+  readonly abandoned: boolean;
+  readonly networth: number;
 
   readonly hero: string;
 }
