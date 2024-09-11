@@ -9,7 +9,14 @@ export interface PlayerInMatchDTO {
   readonly deaths: number;
   readonly assists: number;
   readonly level: number;
-  readonly items: string[];
+  
+  readonly item0: number;
+  readonly item1: number;
+  readonly item2: number;
+  readonly item3: number;
+  readonly item4: number;
+  readonly item5: number;
+  
   readonly gpm: number;
   readonly xpm: number;
   readonly last_hits: number;
