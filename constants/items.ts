@@ -1058,4 +1058,7 @@ export const ItemIds = [
     ];
 
 
-export const itemIdByName = (name: string) => ItemIds.find(t => t.name === name).id!
+export const itemIdByName = (name: string) => {
+  const rname = name.replace('item_', '')
+  return ItemIds.find(t => t.name === rname).id!
+}
