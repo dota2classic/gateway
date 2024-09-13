@@ -1,6 +1,6 @@
-import { PlayerId } from '../../shared-types/player-id';
-import { Dota2Version } from '../../shared-types/dota2version';
-import { BanReason } from '../../shared-types/ban';
+import { PlayerId } from "../../shared-types/player-id";
+import { Dota2Version } from "../../shared-types/dota2version";
+import { BanReason } from "../../shared-types/ban";
 
 export class BanStatus {
   static NOT_BANNED: BanStatus = new BanStatus(
@@ -36,7 +36,7 @@ export class GetPlayerInfoQueryResult {
     public readonly mmr: number,
     public readonly recentWinrate: number,
     public readonly recentKDA: number,
-    public readonly summary: PlayerOverviewSummary,
+    public readonly gamesPlayed: number,
     public readonly banStatus: BanStatus,
   ) {}
 }
