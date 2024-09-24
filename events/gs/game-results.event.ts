@@ -3,39 +3,41 @@ import { DotaTeam } from '../../shared-types/dota-team';
 import { Dota_GameMode } from '../../shared-types/dota-game-mode';
 
 export interface PlayerInMatchDTO {
-  readonly steam_id: string;
-  readonly team: number;
-  readonly kills: number;
-  readonly deaths: number;
-  readonly assists: number;
-  readonly level: number;
-  
-  readonly item0: number;
-  readonly item1: number;
-  readonly item2: number;
-  readonly item3: number;
-  readonly item4: number;
-  readonly item5: number;
-  
-  readonly gpm: number;
-  readonly xpm: number;
-  readonly last_hits: number;
-  readonly denies: number;
-  readonly abandoned: boolean;
-  readonly networth: number;
+   steam_id: string;
+   team: number;
+   kills: number;
+   deaths: number;
+   assists: number;
+   level: number;
 
-  readonly hero: string;
+   item0: number;
+   item1: number;
+   item2: number;
+   item3: number;
+   item4: number;
+   item5: number;
+
+   gpm: number;
+   xpm: number;
+   last_hits: number;
+   denies: number;
+   networth: number;
+   heroDamage: number;
+   towerDamage: number;
+   heroHealing: number;
+   abandoned: boolean;
+   hero: string;
 }
 
 export class GameResultsEvent {
   constructor(
-    public readonly matchId: number,
-    public readonly winner: DotaTeam,
-    public readonly duration: number,
-    public readonly gameMode: Dota_GameMode,
-    public readonly type: MatchmakingMode,
-    public readonly timestamp: number,
-    public readonly server: string,
-    public readonly players: PlayerInMatchDTO[],
+    public matchId: number,
+    public winner: DotaTeam,
+    public duration: number,
+    public gameMode: Dota_GameMode,
+    public type: MatchmakingMode,
+    public timestamp: number,
+    public server: string,
+    public players: PlayerInMatchDTO[],
   ) {}
 }
