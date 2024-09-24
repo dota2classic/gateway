@@ -22,9 +22,12 @@ export function outerQuery<T, B>(
       constructor(private readonly redis: ClientProxy) {}
 
       async execute(query: T): Promise<B> {
+
         if (cache) {
           // @ts-ignore
-          const cached = await cache.getCached([type.name, [query]]);
+          const cached = await cache.getCached([type.name, [query]]).catch((e) => {
+            console.error('nooo', e)
+          });
           if (cached) {
             return cached;
           }
