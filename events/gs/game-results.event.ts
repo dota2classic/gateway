@@ -39,5 +39,6 @@ export class GameResultsEvent {
     public timestamp: number,
     public server: string,
     public players: PlayerInMatchDTO[],
+    public externalMatchId?: number
   ) {}
 }
