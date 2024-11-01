@@ -1,14 +1,14 @@
 import { Page } from '../shared-types/page';
 
-export function makePage<R, T = R>(
+export async function makePage<R, T = R>(
   items: R[],
   total: number,
   page: number,
   perPage: number,
-  mapper: (R) => T = (x) => x,
-): Page<T> {
+  mapper: (R) => Promise<T> | T = x => x,
+): Promise<Page<T>> {
   return {
-    data: items.map(mapper),
+    data: await Promise.all(items.map(mapper)),
     page,
     perPage: perPage,
     pages: Math.ceil(total / perPage),
