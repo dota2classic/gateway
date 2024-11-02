@@ -1,13 +1,13 @@
-import { MatchmakingMode } from '../shared-types/matchmaking-mode';
-import { PlayerId } from '../shared-types/player-id';
-import { Dota2Version } from '../shared-types/dota2version';
-import { DotaTeam } from '../shared-types/dota-team';
+import { MatchmakingMode } from "../shared-types/matchmaking-mode";
+import { PlayerId } from "../shared-types/player-id";
+import { Dota2Version } from "../shared-types/dota2version";
+import { DotaTeam } from "../shared-types/dota-team";
 
 export class MatchPlayer {
   constructor(
     public readonly playerId: PlayerId,
-    public readonly name: string,
     public readonly team: DotaTeam,
+    public readonly partyId: string,
   ) {}
 }
 
