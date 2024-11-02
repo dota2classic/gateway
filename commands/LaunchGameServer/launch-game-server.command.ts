@@ -1,7 +1,8 @@
 import { MatchmakingMode } from '../../shared-types/matchmaking-mode';
 import { Dota2Version } from '../../shared-types/dota2version';
-import { MatchPlayer } from '../../events/room-ready.event';
 import { Dota_GameMode } from '../../shared-types/dota-game-mode';
+import { PlayerId } from '../../shared-types/player-id';
+import { DotaTeam } from '../../shared-types/dota-team';
 
 export class LaunchGameServerCommand {
   constructor(
@@ -11,12 +12,21 @@ export class LaunchGameServerCommand {
   ) {}
 }
 
+export class FullMatchPlayer {
+  constructor(
+    public readonly playerId: PlayerId,
+    public readonly team: DotaTeam,
+    public readonly name: string,
+    public readonly partyId: string
+  ) {
+  }
+}
 export class GSMatchInfo {
   constructor(
     public readonly mode: MatchmakingMode,
     public readonly gameMode: Dota_GameMode,
     public readonly roomId: string,
-    public readonly players: MatchPlayer[],
+    public readonly players: FullMatchPlayer[],
     public readonly version: Dota2Version,
     public readonly averageMMR: number,
   ) {}
