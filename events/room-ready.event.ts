@@ -29,7 +29,7 @@ export class RoomReadyEvent {
     public readonly roomId: string,
     public readonly mode: MatchmakingMode,
     public readonly players: MatchPlayer[],
-    public readonly averageMMR: number,
+    // public readonly averageMMR: number,
     public readonly version: Dota2Version
   ) {}
 }
