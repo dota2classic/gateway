@@ -11,7 +11,7 @@ export interface CacheMiddleware<T, B> {
 
 export function outerQuery<T, B>(
   type: Type<T>,
-  provide: string = 'RedisQueue',
+  provide = 'RedisQueue',
   cache?: CacheMiddleware<T, B>,
 ): any {
   // Small trick to set class.name dynamically, it is needed for nestjs
