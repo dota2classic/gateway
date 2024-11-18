@@ -1,3 +1,1 @@
-export class SteamLagReportedEvent {
-
-}
+export class SteamLagReportedEvent {}

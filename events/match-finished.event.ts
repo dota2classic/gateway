@@ -1,6 +1,8 @@
-import {MatchInfo} from "./room-ready.event";
+import { MatchInfo } from "./room-ready.event";
 
 export class MatchFinishedEvent {
-  constructor(public readonly matchId: number, public readonly info: MatchInfo) {
-  }
+  constructor(
+    public readonly matchId: number,
+    public readonly info: MatchInfo,
+  ) {}
 }

@@ -1,5 +1,5 @@
-import { PlayerId } from '../../shared-types/player-id';
-import { UserConnection } from '../../shared-types/user-connection';
+import { PlayerId } from "../../shared-types/player-id";
+import { UserConnection } from "../../shared-types/user-connection";
 
 export class ConnectionEntry {
   constructor(

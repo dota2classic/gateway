@@ -1,6 +1,6 @@
-import {PlayerId} from "../shared-types/player-id";
-import {ReadyState} from "./ready-state-received.event";
-import {MatchmakingMode} from "../shared-types/matchmaking-mode";
+import { PlayerId } from "../shared-types/player-id";
+import { ReadyState } from "./ready-state-received.event";
+import { MatchmakingMode } from "../shared-types/matchmaking-mode";
 
 export class ReadyCheckEntry {
   constructor(

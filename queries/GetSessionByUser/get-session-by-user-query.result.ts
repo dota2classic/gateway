@@ -1,4 +1,3 @@
 export class GetSessionByUserQueryResult {
-  constructor(public readonly serverUrl?: string) {
-  }
+  constructor(public readonly serverUrl?: string) {}
 }

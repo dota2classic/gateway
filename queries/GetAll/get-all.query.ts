@@ -1,3 +1,1 @@
-export class GetAllQuery {
-
-}
+export class GetAllQuery {}

@@ -1,4 +1,4 @@
-import { Dota2Version } from '../shared-types/dota2version';
+import { Dota2Version } from "../shared-types/dota2version";
 
 export class GameServerStoppedEvent {
   constructor(

@@ -1,5 +1,5 @@
-import { Dota2Version } from '../shared-types/dota2version';
-import { MatchmakingMode } from '../shared-types/matchmaking-mode';
+import { Dota2Version } from "../shared-types/dota2version";
+import { MatchmakingMode } from "../shared-types/matchmaking-mode";
 
 export class GameServerFindFailedEvent {
   constructor(

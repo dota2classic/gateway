@@ -5,8 +5,8 @@ export class GameServerInfo {
   }
 
   private getWatchURL() {
-    const host = this.url.split(':')[0];
-    const port = parseInt(this.url.split(':')[1]);
+    const host = this.url.split(":")[0];
+    const port = parseInt(this.url.split(":")[1]);
     return `${host}:${port + 5}`;
   }
 }

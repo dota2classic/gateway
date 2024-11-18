@@ -1,4 +1,4 @@
-import { UserConnection } from '../../shared-types/user-connection';
+import { UserConnection } from "../../shared-types/user-connection";
 
 export class GetByConnectionQuery {
   constructor(

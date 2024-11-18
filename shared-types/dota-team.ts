@@ -1,4 +1,4 @@
 export enum DotaTeam {
   RADIANT = 2,
-  DIRE = 3
+  DIRE = 3,
 }

@@ -1,4 +1,3 @@
 export class DiscoveryRequestedEvent {
-  constructor(public readonly nonce: number) {
-  }
+  constructor(public readonly nonce: number) {}
 }

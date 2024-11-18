@@ -1,5 +1,5 @@
-import { PlayerId } from '../../shared-types/player-id';
-import { Role } from '../../shared-types/roles';
+import { PlayerId } from "../../shared-types/player-id";
+import { Role } from "../../shared-types/roles";
 
 export class UserRolesUpdatedEvent {
   constructor(

@@ -1,5 +1,5 @@
-import {PlayerId} from "../../shared-types/player-id";
-import {MatchmakingMode} from "../../shared-types/matchmaking-mode";
+import { PlayerId } from "../../shared-types/player-id";
+import { MatchmakingMode } from "../../shared-types/matchmaking-mode";
 
 export class GetUserRoomQueryResultRoomInfo {
   constructor(
@@ -9,12 +9,9 @@ export class GetUserRoomQueryResultRoomInfo {
     public readonly accepted: number,
     public readonly total: number,
     public readonly iAccepted: boolean,
-  ) {
-  }
+  ) {}
 }
 
 export class GetUserRoomQueryResult {
-  constructor(
-    public readonly info?: GetUserRoomQueryResultRoomInfo
-  ) {}
+  constructor(public readonly info?: GetUserRoomQueryResultRoomInfo) {}
 }

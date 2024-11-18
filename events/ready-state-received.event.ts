@@ -8,6 +8,9 @@ export enum ReadyState {
 }
 
 export class ReadyStateReceivedEvent {
-  constructor(public readonly playerID: PlayerId, public readonly roomID: string, public readonly state: ReadyState) {
-  }
+  constructor(
+    public readonly playerID: PlayerId,
+    public readonly roomID: string,
+    public readonly state: ReadyState,
+  ) {}
 }

@@ -1,5 +1,3 @@
 export class LaunchGameServerResponse {
-  constructor(public readonly successful: boolean) {
-
-  }
+  constructor(public readonly successful: boolean) {}
 }

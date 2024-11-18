@@ -1,4 +1,4 @@
-import { GSMatchInfo } from '../../commands/LaunchGameServer/launch-game-server.command';
+import { GSMatchInfo } from "../../commands/LaunchGameServer/launch-game-server.command";
 
 export class ServerSessionSyncEvent {
   constructor(

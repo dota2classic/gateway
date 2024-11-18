@@ -1,5 +1,8 @@
-import {ReadyCheckEntry, RoomReadyState} from "./room-ready-check-complete.event";
-import {MatchmakingMode} from "../shared-types/matchmaking-mode";
+import {
+  ReadyCheckEntry,
+  RoomReadyState,
+} from "./room-ready-check-complete.event";
+import { MatchmakingMode } from "../shared-types/matchmaking-mode";
 
 export class ReadyStateUpdatedEvent {
   constructor(

@@ -1,3 +1,3 @@
 export enum UserConnection {
-  DISCORD = 'DISCORD'
+  DISCORD = "DISCORD",
 }

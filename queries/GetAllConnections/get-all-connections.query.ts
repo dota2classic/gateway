@@ -1,6 +1,5 @@
-import { UserConnection } from '../../shared-types/user-connection';
+import { UserConnection } from "../../shared-types/user-connection";
 
 export class GetAllConnectionsQuery {
-  constructor(public readonly connection: UserConnection) {
-  }
+  constructor(public readonly connection: UserConnection) {}
 }

@@ -1,8 +1,8 @@
-import { IQueryHandler, QueryHandler } from '@nestjs/cqrs';
-import { ClientProxy } from '@nestjs/microservices';
-import { Logger, Type } from '@nestjs/common';
-import { performance } from 'perf_hooks';
-import { timeout } from 'rxjs/operators';
+import { IQueryHandler, QueryHandler } from "@nestjs/cqrs";
+import { ClientProxy } from "@nestjs/microservices";
+import { Logger, Type } from "@nestjs/common";
+import { performance } from "perf_hooks";
+import { timeout } from "rxjs/operators";
 
 export interface CacheMiddleware<T, B> {
   getCached(query: T): Promise<B | undefined>;
@@ -11,7 +11,7 @@ export interface CacheMiddleware<T, B> {
 
 export function outerQuery<T, B>(
   type: Type<T>,
-  provide = 'RedisQueue',
+  provide = "RedisQueue",
   cache?: CacheMiddleware<T, B>,
 ): any {
   // Small trick to set class.name dynamically, it is needed for nestjs
@@ -22,12 +22,13 @@ export function outerQuery<T, B>(
       constructor(private readonly redis: ClientProxy) {}
 
       async execute(query: T): Promise<B> {
-
         if (cache) {
           // @ts-ignore
-          const cached = await cache.getCached([type.name, [query]]).catch((e) => {
-            console.error('nooo', e)
-          });
+          const cached = await cache
+            .getCached([type.name, [query]])
+            .catch((e) => {
+              console.error("nooo", e);
+            });
           if (cached) {
             return cached;
           }

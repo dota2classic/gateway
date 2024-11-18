@@ -11,7 +11,6 @@ export class MatchPlayer {
   ) {}
 }
 
-
 export class MatchInfo {
   constructor(
     public readonly mode: MatchmakingMode,
@@ -30,6 +29,6 @@ export class RoomReadyEvent {
     public readonly mode: MatchmakingMode,
     public readonly players: MatchPlayer[],
     // public readonly averageMMR: number,
-    public readonly version: Dota2Version
+    public readonly version: Dota2Version,
   ) {}
 }

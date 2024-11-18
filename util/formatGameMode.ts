@@ -1,5 +1,4 @@
-import {MatchmakingMode} from "../shared-types/matchmaking-mode";
-
+import { MatchmakingMode } from "../shared-types/matchmaking-mode";
 
 export default (mode: MatchmakingMode) => {
   if (mode === MatchmakingMode.SOLOMID) {
@@ -20,7 +19,7 @@ export default (mode: MatchmakingMode) => {
     return "Обычная (с ботами)";
   } else if (mode === MatchmakingMode.HIGHROOM) {
     return "High room";
-  }else {
+  } else {
     return "Неизвестный режим";
   }
 };

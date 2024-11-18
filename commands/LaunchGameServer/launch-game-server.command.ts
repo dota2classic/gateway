@@ -1,8 +1,8 @@
-import { MatchmakingMode } from '../../shared-types/matchmaking-mode';
-import { Dota2Version } from '../../shared-types/dota2version';
-import { Dota_GameMode } from '../../shared-types/dota-game-mode';
-import { PlayerId } from '../../shared-types/player-id';
-import { DotaTeam } from '../../shared-types/dota-team';
+import { MatchmakingMode } from "../../shared-types/matchmaking-mode";
+import { Dota2Version } from "../../shared-types/dota2version";
+import { Dota_GameMode } from "../../shared-types/dota-game-mode";
+import { PlayerId } from "../../shared-types/player-id";
+import { DotaTeam } from "../../shared-types/dota-team";
 
 export class LaunchGameServerCommand {
   constructor(
@@ -17,9 +17,8 @@ export class FullMatchPlayer {
     public readonly playerId: PlayerId,
     public readonly team: DotaTeam,
     public readonly name: string,
-    public readonly partyId: string
-  ) {
-  }
+    public readonly partyId: string,
+  ) {}
 }
 export class GSMatchInfo {
   constructor(
@@ -31,4 +30,3 @@ export class GSMatchInfo {
     public readonly averageMMR: number,
   ) {}
 }
-

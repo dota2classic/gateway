@@ -1,5 +1,5 @@
-import { PlayerId } from '../../shared-types/player-id';
-import { BanReason } from '../../shared-types/ban';
+import { PlayerId } from "../../shared-types/player-id";
+import { BanReason } from "../../shared-types/ban";
 
 export class BanSystemEntry {
   constructor(
@@ -12,6 +12,6 @@ export class BanSystemEvent {
     public readonly id: PlayerId,
     public readonly entries: BanSystemEntry[],
     public readonly resultBanDate: number,
-    public readonly banDuration: number
+    public readonly banDuration: number,
   ) {}
 }

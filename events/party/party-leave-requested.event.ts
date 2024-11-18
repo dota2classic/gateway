@@ -1,6 +1,5 @@
-import {PlayerId} from "../../shared-types/player-id";
+import { PlayerId } from "../../shared-types/player-id";
 
 export class PartyLeaveRequestedEvent {
-  constructor(public readonly playerId: PlayerId) {
-  }
+  constructor(public readonly playerId: PlayerId) {}
 }

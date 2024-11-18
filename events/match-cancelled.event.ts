@@ -1,4 +1,4 @@
-import { MatchInfo } from '../events/room-ready.event';
+import { MatchInfo } from "../events/room-ready.event";
 
 export class MatchCancelledEvent {
   constructor(
