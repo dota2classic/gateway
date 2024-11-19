@@ -4,4 +4,5 @@ export enum BanReason {
   INFINITE_BAN,
   REPORTS,
   ABANDON,
+  LEARN2PLAY
 }
