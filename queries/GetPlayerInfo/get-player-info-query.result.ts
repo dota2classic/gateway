@@ -1,22 +1,22 @@
-import { PlayerId } from "../../shared-types/player-id";
-import { Dota2Version } from "../../shared-types/dota2version";
-import { BanReason } from "../../shared-types/ban";
+import { PlayerId } from '../../shared-types/player-id';
+import { Dota2Version } from '../../shared-types/dota2version';
+import { BanReason } from '../../shared-types/ban';
 
 export class BanStatus {
   static NOT_BANNED: BanStatus = new BanStatus(
     false,
-    0,
+    new Date(0).toISOString(),
     BanReason.INFINITE_BAN,
   );
 
   static PERMA_BAN: BanStatus = new BanStatus(
     true,
-    new Date(2048, 6).getTime(),
+    new Date(2048, 6).toISOString(),
     BanReason.INFINITE_BAN,
   );
   constructor(
     public readonly isBanned: boolean,
-    public readonly bannedUntil: number,
+    public readonly bannedUntil: string,
     public readonly status: BanReason,
   ) {}
 }
