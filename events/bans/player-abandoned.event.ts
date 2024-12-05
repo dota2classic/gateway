@@ -5,6 +5,7 @@ export class PlayerAbandonedEvent {
   constructor(
     public readonly playerId: PlayerId,
     public readonly matchId: number,
+    public readonly abandonIndex: number,
     public readonly mode: MatchmakingMode,
   ) {}
 }
