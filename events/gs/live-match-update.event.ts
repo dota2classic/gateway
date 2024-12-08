@@ -5,10 +5,7 @@ import { DotaConnectionState } from "../../shared-types/dota-player-connection-s
 
 class PlayerInfo {
   hero: string;
-  team: number;
-  steam_id: string;
   level: number;
-  connection: DotaConnectionState
 
   bot: boolean;
 
@@ -35,6 +32,13 @@ class PlayerInfo {
   respawn_time: number;
 }
 
+export class SlotInfo {
+  team: number;
+  steam_id: string;
+  connection: DotaConnectionState;
+  hero_data: PlayerInfo | undefined;
+}
+
 export class LiveMatchUpdateEvent {
   matchId: number;
   matchmaking_mode: MatchmakingMode;
@@ -43,5 +47,5 @@ export class LiveMatchUpdateEvent {
   duration: number;
   server: string;
   timestamp: number;
-  heroes: PlayerInfo[];
+  heroes: SlotInfo[];
 }
