@@ -1,11 +1,14 @@
+import { Dota_GameRulesState } from "../../shared-types/dota-game-rules-state";
 import { Dota_GameMode } from "../../shared-types/dota-game-mode";
 import { MatchmakingMode } from "../../shared-types/matchmaking-mode";
+import { DotaConnectionState } from "../../shared-types/dota-player-connection-state";
 
 class PlayerInfo {
   hero: string;
   team: number;
   steam_id: string;
   level: number;
+  connection: DotaConnectionState
 
   bot: boolean;
 
@@ -36,6 +39,7 @@ export class LiveMatchUpdateEvent {
   matchId: number;
   matchmaking_mode: MatchmakingMode;
   game_mode: Dota_GameMode;
+  game_state: Dota_GameRulesState;
   duration: number;
   server: string;
   timestamp: number;
