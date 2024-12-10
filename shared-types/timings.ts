@@ -15,11 +15,14 @@ export const CRITICAL_REPORT_COUNT_TO_BAN = 3;
 
 export const MATCH_REPORT_TIMEOUT = 1000 * 60 * 60 * 24 * 3; // 24 HOURS
 
-// 5 min
-export const LIGHT_PUNISHMENT = 1000 * 60 * 5;
+// 1 min
+export const LIGHT_PUNISHMENT = 1000 * 60 * 1;
 
-// 3 hrs
-export const HARD_PUNISHMENT = 1000 * 60 * 60 * 3;
+// 15 min
+export const MEDIUM_PUNISHMENT = 1000 * 60 * 15;
+
+// 12 hrs
+export const HARD_PUNISHMENT = 1000 * 60 * 60 * 12;
 
 // 40 hrs
 export const VERY_HARD_PUNISHMENT = 1000 * 60 * 60 * 40;
