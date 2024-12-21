@@ -18,8 +18,8 @@ export const MATCH_REPORT_TIMEOUT = 1000 * 60 * 60 * 24 * 3; // 24 HOURS
 // 1 min
 export const LIGHT_PUNISHMENT = 1000 * 60 * 1;
 
-// 15 min
-export const MEDIUM_PUNISHMENT = 1000 * 60 * 15;
+// 10 min
+export const MEDIUM_PUNISHMENT = 1000 * 60 * 10;
 
 // 12 hrs
 export const HARD_PUNISHMENT = 1000 * 60 * 60 * 12;
