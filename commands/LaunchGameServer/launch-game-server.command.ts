@@ -1,13 +1,12 @@
-import { MatchmakingMode } from "../../shared-types/matchmaking-mode";
-import { Dota2Version } from "../../shared-types/dota2version";
-import { Dota_GameMode } from "../../shared-types/dota-game-mode";
-import { PlayerId } from "../../shared-types/player-id";
-import { DotaTeam } from "../../shared-types/dota-team";
-import { Dota_Map } from "../../shared-types/dota-map";
+import { MatchmakingMode } from '../../shared-types/matchmaking-mode';
+import { Dota2Version } from '../../shared-types/dota2version';
+import { Dota_GameMode } from '../../shared-types/dota-game-mode';
+import { PlayerId } from '../../shared-types/player-id';
+import { DotaTeam } from '../../shared-types/dota-team';
+import { Dota_Map } from '../../shared-types/dota-map';
 
 export class LaunchGameServerCommand {
   constructor(
-    public readonly url: string,
     public readonly matchId: number,
     public readonly info: GSMatchInfo,
   ) {}
