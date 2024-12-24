@@ -5,7 +5,6 @@ export class MessageUpdatedEvent {
     public readonly authorId: string,
     public readonly createdAt: string,
     public readonly content: string,
-    public readonly messageIndex: number,
-    public readonly deleted: boolean,
+    public readonly deleted: boolean
   ) {}
 }

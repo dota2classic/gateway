@@ -6,6 +6,5 @@ export class MessageCreatedEvent {
     public readonly authorId: string,
     public readonly createdAt: string,
     public readonly content: string,
-    public readonly messageIndex: number,
   ) {}
 }
