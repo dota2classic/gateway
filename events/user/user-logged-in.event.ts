@@ -5,5 +5,6 @@ export class UserLoggedInEvent {
     public readonly playerId: PlayerId,
     public readonly name: string,
     public readonly avatar: string,
+    public readonly referral?: string,
   ) {}
 }
