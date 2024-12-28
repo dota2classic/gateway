@@ -1,4 +1,17 @@
-import { ReactionEntry } from '../../forum/dto/message.dto';
+
+
+export class EmoticonDto {
+  id: number;
+  code: string;
+
+  bucket: string;
+  key: string;
+}
+
+export class ReactionEntry {
+  emoticon: EmoticonDto;
+  count: number;
+}
 
 export class MessageUpdatedEvent {
   constructor(
