@@ -5,5 +5,6 @@ export class PlayerConnectedEvent {
     public readonly playerId: PlayerId,
     public readonly matchId: number,
     public readonly serverUrl: string,
+    public readonly ip: string,
   ) {}
 }
