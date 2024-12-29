@@ -10,7 +10,7 @@ export class EmoticonDto {
 
 export class ReactionEntry {
   emoticon: EmoticonDto;
-  count: number;
+  reacted: string[]
 }
 
 export class MessageUpdatedEvent {
