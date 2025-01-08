@@ -19,6 +19,7 @@ export class MessageUpdatedEvent {
     public readonly id: string,
     public readonly author: string,
     public readonly createdAt: string,
+    public readonly updatedAt: string,
     public readonly content: string,
     public readonly deleted: boolean,
     public readonly repliedMessage: MessageUpdatedEvent | undefined,
