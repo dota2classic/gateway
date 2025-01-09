@@ -1,4 +1,4 @@
-export class Page<DataType, CursorType> {
+export class Page<DataType, CursorType = unknown> {
   data: DataType[];
   page: number;
   perPage: number;
