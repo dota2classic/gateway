@@ -22,6 +22,7 @@ export class MessageUpdatedEvent {
     public readonly updatedAt: string,
     public readonly content: string,
     public readonly deleted: boolean,
+    public readonly edited: boolean,
     public readonly repliedMessage: MessageUpdatedEvent | undefined,
     public readonly reactions: ReactionEntry[],
   ) {}
