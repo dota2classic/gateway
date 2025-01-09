@@ -1,16 +1,18 @@
-import { Page } from "../shared-types/page";
+import { Page } from '../shared-types/page';
 
-export async function makePage<R, T = R>(
-  items: R[],
+export async function makePage<RawType, CursorType, MappedType = RawType>(
+  items: RawType[],
   total: number,
   page: number,
   perPage: number,
-  mapper: (R) => Promise<T> | T = (x) => x,
-): Promise<Page<T>> {
+  mapper: (R) => Promise<MappedType> | MappedType = (x) => x,
+  cursor?: CursorType,
+): Promise<Page<MappedType, CursorType>> {
   return {
     data: await Promise.all(items.map(mapper)),
     page,
     perPage: perPage,
     pages: Math.ceil(total / perPage),
+    cursor,
   };
 }
