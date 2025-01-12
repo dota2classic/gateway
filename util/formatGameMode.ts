@@ -19,6 +19,8 @@ export default (mode: MatchmakingMode) => {
     return "Обычная (с ботами)";
   } else if (mode === MatchmakingMode.HIGHROOM) {
     return "High room";
+  }  else if (mode === MatchmakingMode.BOTS_2X2) {
+    return "Bots 2x2";
   } else {
     return "Неизвестный режим";
   }

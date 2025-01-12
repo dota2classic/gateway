@@ -10,7 +10,8 @@ export enum MatchmakingMode {
   HIGHROOM = 8,
   TOURNAMENT_SOLOMID = 9,
   CAPTAINS_MODE = 10,
-  LOBBY = 11
+  LOBBY = 11,
+  BOTS_2X2,
 }
 
 export const MatchmakingModes = [
@@ -24,19 +25,5 @@ export const MatchmakingModes = [
   MatchmakingMode.HIGHROOM,
   MatchmakingMode.CAPTAINS_MODE,
   MatchmakingMode.LOBBY,
+  MatchmakingMode.BOTS_2X2,
 ];
-
-export const RoomSizes: { [key in MatchmakingMode]: number } = {
-  [MatchmakingMode.SOLOMID]: 2,
-  [MatchmakingMode.RANKED]: 10,
-  [MatchmakingMode.UNRANKED]: 10,
-  [MatchmakingMode.DIRETIDE]: 10,
-  [MatchmakingMode.GREEVILING]: 10,
-  [MatchmakingMode.TOURNAMENT]: 10,
-  [MatchmakingMode.ABILITY_DRAFT]: 10,
-  [MatchmakingMode.BOTS]: 10,
-  [MatchmakingMode.HIGHROOM]: 10,
-  [MatchmakingMode.CAPTAINS_MODE]: 10,
-  [MatchmakingMode.TOURNAMENT_SOLOMID]: 2,
-  [MatchmakingMode.LOBBY]: 10,
-};
