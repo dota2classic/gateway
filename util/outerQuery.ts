@@ -1,4 +1,4 @@
-import { IQueryHandler, QueryHandler } from "@nestjs/cqrs";
+import { IQuery, IQueryHandler, QueryHandler } from "@nestjs/cqrs";
 import { ClientProxy } from "@nestjs/microservices";
 import { Logger, Type } from "@nestjs/common";
 import { performance } from "perf_hooks";
@@ -9,7 +9,7 @@ export interface CacheMiddleware<T, B> {
   setNew(query: T, value: B): Promise<void>;
 }
 
-export function outerQuery<T, B>(
+export function outerQuery<T extends IQuery, B>(
   type: Type<T>,
   provide = "RedisQueue",
   cache?: CacheMiddleware<T, B>,
@@ -36,6 +36,7 @@ export function outerQuery<T, B>(
         const time = performance.now();
 
         try {
+          // @ts-ignore
           return await this.redis
             .send<B>(type.name, query)
             .pipe(timeout(5000))
@@ -50,6 +51,7 @@ export function outerQuery<T, B>(
           }
         }
 
+        // @ts-ignore
         return undefined;
       }
     },

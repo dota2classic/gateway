@@ -5,7 +5,7 @@ export async function makePage<RawType, CursorType, MappedType = RawType>(
   total: number,
   page: number,
   perPage: number,
-  mapper: (R) => Promise<MappedType> | MappedType = (x) => x,
+  mapper: (r: RawType) => Promise<MappedType> | MappedType,
   cursor?: CursorType,
 ): Promise<Page<MappedType, CursorType>> {
   return {
