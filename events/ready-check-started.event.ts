@@ -8,7 +8,6 @@ export class ReadyCheckStartedEvent {
   constructor(
     public readonly roomId: string,
     public readonly mode: MatchmakingMode,
-    public readonly entries: ReadyCheckEntry[],
-    public readonly state: RoomReadyState,
+    public readonly entries: ReadyCheckEntry[]
   ) {}
 }

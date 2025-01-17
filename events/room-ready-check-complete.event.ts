@@ -4,7 +4,7 @@ import { MatchmakingMode } from "../shared-types/matchmaking-mode";
 
 export class ReadyCheckEntry {
   constructor(
-    public readonly playerId: PlayerId,
+    public readonly steamId: string,
     public readonly readyState: ReadyState,
   ) {}
 }
