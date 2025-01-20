@@ -1,9 +1,11 @@
-import { PlayerId } from "../../shared-types/player-id";
+import { MatchmakingMode } from "../../shared-types/matchmaking-mode";
 
 export class GetPartyQueryResult {
   constructor(
-    public readonly id: string,
-    public readonly leader: PlayerId,
-    public readonly players: PlayerId[],
+    public readonly partyId: string,
+    public readonly leaderId: string,
+    public readonly players: string[],
+    public readonly modes: MatchmakingMode[],
+    public readonly inQueue: boolean,
   ) {}
 }
