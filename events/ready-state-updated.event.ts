@@ -1,7 +1,4 @@
-import {
-  ReadyCheckEntry,
-  RoomReadyState,
-} from "./room-ready-check-complete.event";
+import { ReadyCheckEntry } from "./room-ready-check-complete.event";
 import { MatchmakingMode } from "../shared-types/matchmaking-mode";
 
 export class ReadyStateUpdatedEvent {
@@ -9,6 +6,5 @@ export class ReadyStateUpdatedEvent {
     public readonly roomID: string,
     public readonly mode: MatchmakingMode,
     public readonly entries: ReadyCheckEntry[],
-    public readonly state: RoomReadyState,
   ) {}
 }
