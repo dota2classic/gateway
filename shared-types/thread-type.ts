@@ -3,4 +3,5 @@ export enum ThreadType {
   PLAYER = 'player',
   FORUM = 'forum',
   LOBBY = 'lobby',
+  FEEDBACK = 'feedback'
 }
