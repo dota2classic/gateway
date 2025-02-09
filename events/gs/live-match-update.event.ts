@@ -1,7 +1,7 @@
-import { Dota_GameRulesState } from "../../shared-types/dota-game-rules-state";
-import { Dota_GameMode } from "../../shared-types/dota-game-mode";
-import { MatchmakingMode } from "../../shared-types/matchmaking-mode";
-import { DotaConnectionState } from "../../shared-types/dota-player-connection-state";
+import { Dota_GameRulesState } from '../../shared-types/dota-game-rules-state';
+import { Dota_GameMode } from '../../shared-types/dota-game-mode';
+import { MatchmakingMode } from '../../shared-types/matchmaking-mode';
+import { DotaConnectionState } from '../../shared-types/dota-player-connection-state';
 
 class PlayerInfo {
   hero: string;
@@ -46,6 +46,6 @@ export class LiveMatchUpdateEvent {
   game_state: Dota_GameRulesState;
   duration: number;
   server: string;
-  timestamp: number;
+  timestamp: number; // TODO: make iso string
   heroes: SlotInfo[];
 }
