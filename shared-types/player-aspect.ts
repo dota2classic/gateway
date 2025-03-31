@@ -1,5 +1,7 @@
 export enum PlayerAspect {
   FRIENDLY,
   TOXIC,
-  WINNER
+  WINNER,
+  RUINER,
+  GOOD,
 }
