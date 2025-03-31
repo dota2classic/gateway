@@ -14,7 +14,7 @@ export const REPORT_STACK_WINDOW = "24 hours";
 export const CRITICAL_REPORT_COUNT_TO_BAN = 3;
 
 // export const MATCH_REPORT_TIMEOUT = 1000 * 60 * 60 * 24 * 3; // 24 HOURS
-export const MATCH_REPORT_TIMEOUT = 1000 * 60 * 60 * 24 * 128; // 24 HOURS
+export const MATCH_REPORT_TIMEOUT = 1000 * 60 * 60 * 24 * 2; // 2 days
 
 // 1 min
 export const LIGHT_PUNISHMENT = 1000 * 60 * 1;
