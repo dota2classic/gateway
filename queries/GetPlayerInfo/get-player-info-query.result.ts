@@ -1,6 +1,7 @@
 import { PlayerId } from '../../shared-types/player-id';
 import { Dota2Version } from '../../shared-types/dota2version';
 import { BanReason } from '../../shared-types/ban';
+import { MatchAccessLevel } from '../../shared-types/match-access-level';
 
 export class BanStatus {
   static NOT_BANNED: BanStatus = new BanStatus(
@@ -38,5 +39,6 @@ export class GetPlayerInfoQueryResult {
     public readonly recentKDA: number,
     public readonly gamesPlayed: number,
     public readonly banStatus: BanStatus,
+    public readonly accessLevel: MatchAccessLevel,
   ) {}
 }
