@@ -7,5 +7,6 @@ export class GetPartyQueryResult {
     public readonly players: string[],
     public readonly modes: MatchmakingMode[],
     public readonly inQueue: boolean,
+    public readonly enterQueueTime?: string,
   ) {}
 }
