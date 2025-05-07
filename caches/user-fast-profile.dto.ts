@@ -1,5 +1,5 @@
 import { Role } from '../shared-types/roles';
-import { UserConnection } from 'shared-types/user-connection';
+import { UserConnection } from '../shared-types/user-connection';
 
 export class ExternalUserConnection {
   connection: UserConnection;
