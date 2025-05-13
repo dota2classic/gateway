@@ -40,5 +40,6 @@ export class GetPlayerInfoQueryResult {
     public readonly gamesPlayed: number,
     public readonly banStatus: BanStatus,
     public readonly accessLevel: MatchAccessLevel,
+    public readonly dodgeList: string[],
   ) {}
 }
