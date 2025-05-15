@@ -22,6 +22,9 @@ export const LIGHT_PUNISHMENT = 1000 * 60 * 1;
 // 10 min
 export const MEDIUM_PUNISHMENT = 1000 * 60 * 10;
 
+// 4 hrs
+export const SEMI_HARD = 1000 * 60 * 60 * 4;
+
 // 12 hrs
 export const HARD_PUNISHMENT = 1000 * 60 * 60 * 12;
 
