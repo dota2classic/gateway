@@ -1,6 +1,6 @@
-import { MatchmakingMode } from "../../shared-types/matchmaking-mode";
-import { DotaTeam } from "../../shared-types/dota-team";
-import { Dota_GameMode } from "../../shared-types/dota-game-mode";
+import { MatchmakingMode } from '../../shared-types/matchmaking-mode';
+import { DotaTeam } from '../../shared-types/dota-team';
+import { Dota_GameMode } from '../../shared-types/dota-game-mode';
 
 export interface PlayerInMatchDTO {
   steam_id: string;
@@ -27,6 +27,7 @@ export interface PlayerInMatchDTO {
   heroHealing: number;
   abandoned: boolean;
   hero: string;
+  partyIndex: number;
 }
 
 export class GameResultsEvent {
