@@ -1,9 +1,9 @@
-import { GSMatchInfo } from "../commands/LaunchGameServer/launch-game-server.command";
+import { MatchSummary } from '../shared-types/match-summary';
 
 export class GameSessionFinishedEvent {
   constructor(
     public readonly url: string,
     public readonly matchId: number,
-    public readonly info: GSMatchInfo,
+    public readonly info: MatchSummary,
   ) {}
 }

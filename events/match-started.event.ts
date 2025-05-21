@@ -1,10 +1,10 @@
-import { MatchInfo } from "../events/room-ready.event";
-import { GameServerInfo } from "../shared-types/game-server-info";
+import { GameServerInfo } from '../shared-types/game-server-info';
+import { MatchSummary } from '../shared-types/match-summary';
 
 export class MatchStartedEvent {
   constructor(
     public readonly matchId: number,
-    public readonly info: MatchInfo,
+    public readonly info: MatchSummary,
     public readonly gsInfo: GameServerInfo,
   ) {}
 }
