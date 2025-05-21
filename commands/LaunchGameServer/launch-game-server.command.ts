@@ -11,6 +11,8 @@ export class LaunchGameServerCommand {
     public readonly gameMode: number,
     public readonly roomId: string,
     public readonly map: Dota_Map,
+    public readonly fillBots: boolean,
+    public readonly enableCheats: boolean,
     public readonly players: FullMatchPlayer[],
   ) {}
 }
