@@ -6,7 +6,7 @@ import { Dota_Map } from '../../shared-types/dota-map';
 
 export class LaunchGameServerCommand {
   constructor(
-    public readonly matchId: number,
+    public matchId: number,
     public readonly lobbyType: number,
     public readonly gameMode: number,
     public readonly roomId: string,
