@@ -21,7 +21,6 @@ export class FullMatchPlayer {
     public readonly name: string,
     public readonly subscriber: boolean,
     public readonly muted: boolean,
-    public readonly ignore: boolean,
     public readonly partyId: string,
     public readonly team: DotaTeam,
   ) {}
