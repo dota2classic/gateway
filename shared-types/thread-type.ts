@@ -4,5 +4,6 @@ export enum ThreadType {
   FORUM = 'forum',
   LOBBY = 'lobby',
   TICKET = 'ticket',
-  BLOGPOST = 'blogpost'
+  BLOGPOST = 'blogpost',
+  REPORT = 'report'
 }
