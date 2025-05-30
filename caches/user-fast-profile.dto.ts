@@ -6,11 +6,16 @@ export class ExternalUserConnection {
   connection: UserConnection;
   externalId: string;
 }
+
+export class RoleLifetime {
+  role: Role;
+  endTime: string;
+}
 export class UserFastProfileDto {
   steamId: string;
   name: string;
   avatar: string;
-  roles: Role[];
+  roles: RoleLifetime[];
   connections: ExternalUserConnection[];
 }
 
