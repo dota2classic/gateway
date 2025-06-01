@@ -35,3 +35,9 @@ export const MAX_TIME_FOR_PUNISHMENT_MULTIPLY = 1000 * 60 * 4;
 
 // 6 hours
 export const CRIMES_INTERVAL_FOR_MULTIPLY = 1000 * 60 * 60 * 6;
+
+
+
+//
+export const DAY = 1000 * 60 * 60 * 24 * 1;
+export const TWO_WEEKS = 1000 * 60 * 60 * 24 * 14;
