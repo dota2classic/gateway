@@ -4,7 +4,8 @@ export class MarketItemDto {
     public readonly quality: string,
     public readonly price: number,
     public readonly icon: string,
-    public readonly type: string
+    public readonly type: string,
+    public readonly rarity: string,
   ) {}
 }
 
