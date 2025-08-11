@@ -3,6 +3,6 @@ export class MatchFailedEvent {
     public readonly matchId: number,
     public readonly serverUrl: string,
     public readonly failedPlayers: string[],
-    public readonly goodPlayers: string[],
+    public readonly goodParties: string[],
   ) {}
 }
