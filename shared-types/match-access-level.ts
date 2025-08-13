@@ -1,4 +1,4 @@
-import { MatchmakingMode } from './matchmaking-mode';
+import { MatchmakingMode } from "./matchmaking-mode";
 
 /**
  * EDUCATION = need to finish education, either win or lose
@@ -40,6 +40,8 @@ export const getRequiredAccessLevel = (
     case MatchmakingMode.LOBBY:
       return MatchAccessLevel.EDUCATION;
     case MatchmakingMode.BOTS_2X2:
+      return MatchAccessLevel.SIMPLE_MODES;
+    case MatchmakingMode.TURBO:
       return MatchAccessLevel.SIMPLE_MODES;
   }
 };

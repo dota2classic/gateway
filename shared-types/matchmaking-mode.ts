@@ -12,6 +12,7 @@ export enum MatchmakingMode {
   CAPTAINS_MODE = 10,
   LOBBY = 11,
   BOTS_2X2,
+  TURBO
 }
 
 export const MatchmakingModes = [
@@ -26,4 +27,5 @@ export const MatchmakingModes = [
   MatchmakingMode.CAPTAINS_MODE,
   MatchmakingMode.LOBBY,
   MatchmakingMode.BOTS_2X2,
+  MatchmakingMode.TURBO
 ];
