@@ -4,6 +4,7 @@ import { Dota_GameMode } from '../../shared-types/dota-game-mode';
 import { DotaTeam } from '../../shared-types/dota-team';
 import { Dota_Map } from '../../shared-types/dota-map';
 import { DotaPatch } from '../../constants/patch';
+import { Region } from '../../shared-types/region';
 
 export class LaunchGameServerCommand {
   constructor(
@@ -15,7 +16,8 @@ export class LaunchGameServerCommand {
     public readonly fillBots: boolean,
     public readonly enableCheats: boolean,
     public readonly players: FullMatchPlayer[],
-    public readonly patch: DotaPatch
+    public readonly patch: DotaPatch,
+    public readonly region: Region,
   ) {}
 }
 
