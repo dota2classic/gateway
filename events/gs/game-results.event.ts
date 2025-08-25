@@ -51,6 +51,8 @@ export class GameResultsEvent {
     public patch: DotaPatch,
     public region: Region,
     public players: PlayerInMatchDTO[],
+    public towerStatus: number[],
+    public barracksStatus: number[],
     public externalMatchId?: number,
   ) {}
 }
