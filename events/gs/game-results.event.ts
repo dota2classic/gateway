@@ -1,6 +1,8 @@
 import { MatchmakingMode } from '../../shared-types/matchmaking-mode';
 import { DotaTeam } from '../../shared-types/dota-team';
 import { Dota_GameMode } from '../../shared-types/dota-game-mode';
+import { DotaPatch } from '../../constants/patch';
+import { Region } from '../../shared-types/region';
 
 export interface PlayerInMatchDTO {
   steam_id: string;
@@ -39,6 +41,8 @@ export class GameResultsEvent {
     public type: MatchmakingMode,
     public timestamp: number,
     public server: string,
+    public patch: DotaPatch,
+    public region: Region,
     public players: PlayerInMatchDTO[],
     public externalMatchId?: number,
   ) {}
