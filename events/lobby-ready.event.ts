@@ -1,9 +1,10 @@
-import { MatchmakingMode } from '../shared-types/matchmaking-mode';
-import { Dota2Version } from '../shared-types/dota2version';
-import { MatchPlayer } from './room-ready.event';
-import { Dota_GameMode } from '../shared-types/dota-game-mode';
-import { Dota_Map } from '../shared-types/dota-map';
-import { DotaPatch } from '../constants/patch';
+import { MatchmakingMode } from "../shared-types/matchmaking-mode";
+import { Dota2Version } from "../shared-types/dota2version";
+import { MatchPlayer } from "./room-ready.event";
+import { Dota_GameMode } from "../shared-types/dota-game-mode";
+import { Dota_Map } from "../shared-types/dota-map";
+import { DotaPatch } from "../constants/patch";
+import { Region } from "../shared-types/region";
 
 export class LobbyReadyEvent {
   constructor(
@@ -15,6 +16,7 @@ export class LobbyReadyEvent {
     public readonly version: Dota2Version,
     public readonly fillBots: boolean,
     public readonly enableCheats: boolean,
-    public readonly patch: DotaPatch
+    public readonly patch: DotaPatch,
+    public readonly region: Region,
   ) {}
 }
