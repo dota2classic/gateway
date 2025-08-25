@@ -30,6 +30,13 @@ export interface PlayerInMatchDTO {
   abandoned: boolean;
   hero: string;
   partyIndex: number;
+
+  supportAbilityValue: number;
+  supportGold: number;
+
+  misses: number;
+
+  bear?: number[];
 }
 
 export class GameResultsEvent {
