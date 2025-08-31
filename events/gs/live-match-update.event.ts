@@ -47,5 +47,7 @@ export class LiveMatchUpdateEvent {
   duration: number;
   server: string;
   timestamp: number; // TODO: make iso string
+  towers: [number, number];
+  barracks: [number, number];
   heroes: SlotInfo[];
 }
