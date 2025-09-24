@@ -12,6 +12,7 @@ export class HighlightDTO {
     public tick: number,
     public gameTime: number,
     public hero: string,
+    public heroIndex: number,
     public type: HighlightType,
     public comment: string,
   ) {}
