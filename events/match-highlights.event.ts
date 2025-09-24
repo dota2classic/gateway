@@ -9,6 +9,7 @@ export enum HighlightType {
 
 export class HighlightDTO {
   constructor(
+    public tick: number,
     public gameTime: number,
     public hero: string,
     public type: HighlightType,
