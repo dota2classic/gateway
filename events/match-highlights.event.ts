@@ -7,10 +7,17 @@ export enum HighlightType {
   COMBO_SPELL = "COMBO_SPELL",
 }
 
+export class ReplayTick {
+  constructor(
+    public readonly tick: number,
+    public readonly time: number,
+  ) {}
+}
+
 export class HighlightDTO {
   constructor(
-    public tick: number,
-    public gameTime: number,
+    public start: ReplayTick,
+    public finish: ReplayTick,
     public hero: string,
     public heroIndex: number,
     public type: HighlightType,
