@@ -10,5 +10,10 @@ export enum AchievementKey {
   WIN_1HR_GAME_AGAINST_TECHIES,
   ALL_HERO_CHALLENGE,
   WIN_BOT_GAME,
-  WIN_SOLOMID_GAME
+  WIN_SOLOMID_GAME,
+  KILLS,
+
+
+//   new ones
+
 }

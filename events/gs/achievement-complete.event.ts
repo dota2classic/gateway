@@ -6,5 +6,8 @@ export class AchievementCompleteEvent {
     public readonly playerId: string,
     public readonly hero: string,
     public readonly matchId: number,
+    public readonly progress: number,
+    public readonly checkpointValue: number,
+    public readonly checkpoints: number[],
   ) {}
 }
