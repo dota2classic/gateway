@@ -7,7 +7,7 @@ export class PlayerFinishedMatchEvent {
     public readonly lobbyType: MatchmakingMode,
     public readonly isFirstGame: boolean,
     public readonly unrankedGamesCount: number,
-    public readonly anyGamesCount: number,
+    public readonly anyGamesCount: number
   ) {
   }
 }
