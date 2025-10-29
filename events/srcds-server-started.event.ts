@@ -1,3 +1,6 @@
 export class SrcdsServerStartedEvent {
-  constructor(public readonly server: string) {}
+  constructor(
+    public readonly matchId: number,
+    public readonly server: string,
+  ) {}
 }
