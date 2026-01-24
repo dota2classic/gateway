@@ -5,7 +5,6 @@ export enum BracketType {
 
 export enum TournamentStatus {
   DRAFT = 'DRAFT',
-  PUBLISHED = 'PUBLISHED',
   REGISTRATION = 'REGISTRATION',
   READY_CHECK = 'READY_CHECK',
   IN_PROGRESS = 'IN_PROGRESS',
