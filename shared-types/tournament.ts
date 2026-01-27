@@ -11,7 +11,6 @@ export enum TournamentStatus {
   FINISHED = 'FINISHED',
 }
 
-
 export enum MatchStatus {
   /** The two matches leading to this one are not completed yet. */
   Locked = 0,
