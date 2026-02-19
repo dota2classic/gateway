@@ -5,6 +5,7 @@ import { DotaTeam } from "../../shared-types/dota-team";
 import { Dota_Map } from "../../shared-types/dota-map";
 import { DotaPatch } from "../../constants/patch";
 import { Region } from "../../shared-types/region";
+import { GameServerPluginParameters } from "./game-server-plugin-parameters";
 
 export class LaunchGameServerCommand {
   constructor(
@@ -13,15 +14,10 @@ export class LaunchGameServerCommand {
     public readonly gameMode: number,
     public readonly roomId: string,
     public readonly map: Dota_Map,
-    public readonly fillBots: boolean,
-    public readonly enableCheats: boolean,
     public readonly players: FullMatchPlayer[],
     public readonly patch: DotaPatch,
     public readonly region: Region,
-    public readonly noRunes: boolean,
-    public readonly midTowerToWin: boolean,
-    public readonly killsToWin: number,
-    public readonly enableBanStage: boolean
+    public readonly params: GameServerPluginParameters,
   ) {}
 }
 

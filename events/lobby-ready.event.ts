@@ -5,6 +5,7 @@ import { Dota_GameMode } from "../shared-types/dota-game-mode";
 import { Dota_Map } from "../shared-types/dota-map";
 import { DotaPatch } from "../constants/patch";
 import { Region } from "../shared-types/region";
+import { GameServerPluginParameters } from "../commands/LaunchGameServer/game-server-plugin-parameters";
 
 export class LobbyReadyEvent {
   constructor(
@@ -14,13 +15,8 @@ export class LobbyReadyEvent {
     public readonly gameMode: Dota_GameMode,
     public readonly players: MatchPlayer[],
     public readonly version: Dota2Version,
-    public readonly fillBots: boolean,
-    public readonly enableCheats: boolean,
     public readonly patch: DotaPatch,
     public readonly region: Region,
-    public readonly noRunes: boolean,
-    public readonly midTowerToWin: boolean,
-    public readonly killsToWin: number,
-    public readonly enableBanStage: boolean
+    public readonly params: GameServerPluginParameters
   ) {}
 }
