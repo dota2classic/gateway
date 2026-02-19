@@ -20,7 +20,8 @@ export class LaunchGameServerCommand {
     public readonly region: Region,
     public readonly noRunes: boolean,
     public readonly midTowerToWin: boolean,
-    public readonly killsToWin: number = 0,
+    public readonly killsToWin: number,
+    public readonly enableBanStage: boolean
   ) {}
 }
 
