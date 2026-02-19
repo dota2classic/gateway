@@ -6,14 +6,6 @@ import { Dota_Map } from "../../shared-types/dota-map";
 import { DotaPatch } from "../../constants/patch";
 import { Region } from "../../shared-types/region";
 
-export class NoRunesConfig {
-  constructor(public readonly disableRunes: boolean) {}
-}
-
-export class MidTowerToWinConfig {
-  constructor(public readonly killsToWin: number) {}
-}
-
 export class LaunchGameServerCommand {
   constructor(
     public matchId: number,
@@ -27,7 +19,8 @@ export class LaunchGameServerCommand {
     public readonly patch: DotaPatch,
     public readonly region: Region,
     public readonly noRunes: boolean,
-    public readonly midTowerToWin?: MidTowerToWinConfig,
+    public readonly midTowerToWin: boolean,
+    public readonly killsToWin: number = 0,
   ) {}
 }
 
