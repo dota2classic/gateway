@@ -20,6 +20,6 @@ export class LobbyReadyEvent {
     public readonly region: Region,
     public readonly noRunes: boolean,
     public readonly midTowerToWin: boolean,
-    public readonly midTowerKillsToWin: number
+    public readonly killsToWin: number
   ) {}
 }
