@@ -3,8 +3,6 @@ interface Constructor<T> {
 }
 
 export function construct<T>(constructor: Constructor<T>, data: T) {
-  const buff = data;
-  // @ts-ignore
-  buff.__proto__ = constructor.prototype;
-  return buff;
+  Object.setPrototypeOf(data, constructor.prototype);
+  return data;
 }
