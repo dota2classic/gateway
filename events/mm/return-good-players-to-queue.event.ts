@@ -1,4 +1,4 @@
-import { MatchmakingMode } from 'gateway/shared-types/matchmaking-mode';
+import { MatchmakingMode } from '../../shared-types/matchmaking-mode';
 
 export class ReturnGoodPlayersToQueueEvent {
   constructor(
