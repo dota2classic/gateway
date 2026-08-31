@@ -43,6 +43,10 @@ export const getRequiredAccessLevel = (
       return MatchAccessLevel.SIMPLE_MODES;
     case MatchmakingMode.TURBO:
       return MatchAccessLevel.SIMPLE_MODES;
+    case MatchmakingMode.SECRET:
+      return MatchAccessLevel.HUMAN_GAMES;
+    case MatchmakingMode.REAL_TRUE_OLD_DOTACLASSIC:
+      return MatchAccessLevel.HUMAN_GAMES;
   }
 };
 

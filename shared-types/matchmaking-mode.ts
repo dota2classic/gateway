@@ -12,7 +12,11 @@ export enum MatchmakingMode {
   CAPTAINS_MODE = 10,
   LOBBY = 11,
   BOTS_2X2,
-  TURBO
+  TURBO,
+  // Locked placeholders — visible in mode list but not queueable yet.
+  // Not added to MatchmakingModes below on purpose.
+  SECRET,
+  REAL_TRUE_OLD_DOTACLASSIC
 }
 
 export const MatchmakingModes = [
