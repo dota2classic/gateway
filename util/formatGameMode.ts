@@ -21,6 +21,10 @@ export default (mode: MatchmakingMode) => {
     return "High room";
   }  else if (mode === MatchmakingMode.BOTS_2X2) {
     return "Bots 2x2";
+  } else if (mode === MatchmakingMode.SECRET) {
+    return "SECRET";
+  } else if (mode === MatchmakingMode.REAL_TRUE_OLD_DOTACLASSIC) {
+    return "The Real True Old DotaClassic";
   } else {
     return "Неизвестный режим";
   }
